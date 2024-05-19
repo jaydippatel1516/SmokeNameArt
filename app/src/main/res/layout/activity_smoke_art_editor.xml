@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/back_editor"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editing"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_light" />
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_save"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:background="@drawable/bg_1"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/scrollView"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <com.xiaopo.flying.sticker.StickerView
+            android:layout_gravity="center"
+            android:id="@+id/sticker_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationZ="90dp"
+            app:showBorder="true"
+            app:showIcons="true" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/image_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:translationZ="90dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_smoke"
+        android:background="@color/bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scrollView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_smoke"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_frames"
+        android:background="@color/bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scrollView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_frames"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:background="@drawable/linear_btm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/background"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_bg" />
+
+            <ImageView
+                android:id="@+id/frames"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_frames"
+                android:layout_marginStart="15dp" />
+
+            <ImageView
+                android:id="@+id/add_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_add_text"
+                android:layout_marginStart="15dp" />
+
+            <ImageView
+                android:id="@+id/smoke"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_smoke"
+                android:layout_marginStart="15dp" />
+
+            <ImageView
+                android:id="@+id/colors"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_color"
+                android:layout_marginStart="15dp" />
+
+            <ImageView
+                android:id="@+id/emojis"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_emojies"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

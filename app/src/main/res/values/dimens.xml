@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="clock_face_margin_start">64dp</dimen>
+    <dimen name="color_card_margin">6dp</dimen>
+    <dimen name="color_card_radius">24dp</dimen>
+    <dimen name="color_card_size">48dp</dimen>
+    <dimen name="color_card_square_radius">4dp</dimen>
+    <dimen name="color_picker_view_size">240dp</dimen>
+</resources>
